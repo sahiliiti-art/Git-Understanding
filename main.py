@@ -43,6 +43,23 @@ def is_prime(num):
     return True
 
 
+# Function to check if a number is a palindrome
+def is_palindrome(num):
+    """
+    Check if a number is a palindrome.
+    
+    Args:
+        num: An integer to check
+    
+    Returns:
+        True if the number reads the same forwards and backwards, False otherwise
+    """
+    if num < 0:
+        return False
+    string_num = str(num)
+    return string_num == string_num[::-1]
+
+
 # Test cases
 if __name__ == "__main__":
     # Test with different numbers
@@ -61,3 +78,10 @@ if __name__ == "__main__":
             print(f"{num} is a prime number")
         else:
             print(f"{num} is not a prime number")
+    
+    print("\nTesting palindrome numbers:")
+    for num in numbers:
+        if is_palindrome(num):
+            print(f"{num} is a palindrome")
+        else:
+            print(f"{num} is not a palindrome")
