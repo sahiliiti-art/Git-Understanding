@@ -20,13 +20,44 @@ def is_even_short(num):
     return num % 2 == 0
 
 
+# Function to check if a number is prime
+def is_prime(num):
+    """
+    Check if a number is prime.
+    
+    Args:
+        num: An integer to check
+    
+    Returns:
+        True if the number is prime, False otherwise
+    """
+    if num < 2:
+        return False
+    if num == 2:
+        return True
+    if num % 2 == 0:
+        return False
+    for i in range(3, int(num ** 0.5) + 1, 2):
+        if num % i == 0:
+            return False
+    return True
+
+
 # Test cases
 if __name__ == "__main__":
     # Test with different numbers
     numbers = [4, 7, 10, 15, 20, 23, 0, -4, -7]
     
+    print("Testing even numbers:")
     for num in numbers:
         if is_even(num):
             print(f"{num} is an even number")
         else:
             print(f"{num} is an odd number")
+    
+    print("\nTesting prime numbers:")
+    for num in numbers:
+        if is_prime(num):
+            print(f"{num} is a prime number")
+        else:
+            print(f"{num} is not a prime number")
