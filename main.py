@@ -1,14 +1,6 @@
 # Function to check if a number is even
 def is_even(num):
-    """
-    Check if a number is even.
-    
-    Args:
-        num: An integer to check
-    
-    Returns:
-        True if the number is even, False otherwise
-    """
+   
     if num % 2 == 0:
         return True
     else:
