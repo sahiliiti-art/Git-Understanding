@@ -45,6 +45,7 @@ def is_palindrome(num):
     
     Returns:
         True if the number reads the same forwards and backwards, False otherwise
+        Add this to table
     """
     if num < 0:
         return False
